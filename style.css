@@ -1,0 +1,136 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Georgia, sans-serif;
+    line-height: 1.6;
+    background-color: #eef;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* Navigation Bar */
+nav {
+    background: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #28a745;
+    font-weight: bold;
+    margin: 0 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #1e7e34;
+}
+
+/* Main Section Styling */
+main {
+    padding: 2rem;
+}
+
+main section {
+    margin-bottom: 2rem;
+}
+
+main section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+/* Form Styling */
+form {
+    background: #fff;
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+form button {
+    background: #28a745;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: #1e7e34;
+}
+
+/* Success Message */
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+/* Footer Styling */
+footer {
+    background: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
