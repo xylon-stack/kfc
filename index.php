@@ -1,8 +1,44 @@
 <?php
-// Data dinamis untuk halaman
-$title = "Contoh Halaman PHP";
-$year = date("Y");
-$name = "Pengguna";
+// Mulai sesi untuk menyimpan pesan
+session_start();
+
+// Inisialisasi variabel pesan
+$success = '';
+$name = '';
+$email = '';
+$message = '';
+
+// Cek apakah formulir telah disubmit
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Mengambil data dari formulir dan mengamankannya
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $message = htmlspecialchars(trim($_POST['message']));
+
+    // Validasi sederhana
+    if (!empty($name) && !empty($email) && !empty($message)) {
+        // Simpan data atau kirim email (contoh ini hanya menyimpan pesan sukses)
+        $success = "Terima kasih, $name! Pesan Anda telah diterima.";
+        
+        // Reset nilai formulir
+        $name = $email = $message = '';
+    } else {
+        $success = "Mohon lengkapi semua bidang formulir.";
+    }
+
+    // Simpan pesan ke sesi untuk ditampilkan setelah redirect
+    $_SESSION['success'] = $success;
+    
+    // Redirect untuk mencegah pengiriman ulang formulir
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit();
+}
+
+// Ambil pesan dari sesi jika ada
+if (isset($_SESSION['success'])) {
+    $success = $_SESSION['success'];
+    unset($_SESSION['success']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
