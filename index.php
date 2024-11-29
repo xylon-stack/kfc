@@ -96,6 +96,7 @@ if (isset($_SESSION['success'])) {
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
     </nav>
     <main>
@@ -106,6 +107,11 @@ if (isset($_SESSION['success'])) {
         <section id="about">
             <h2>About</h2>
             <p>Halaman ini dibuat sebagai contoh bagaimana PHP dapat digunakan untuk membuat halaman web dinamis.</p>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Contoh Gambar">
+            <p>Gambar di atas adalah contoh placeholder. Anda bisa mengganti dengan gambar Anda sendiri.</p>
         </section>
         <section id="contact">
             <h2>Contact</h2>
